@@ -12,7 +12,7 @@
 
       <div
         v-for="el of mainContent"
-        :style="{animationDuration: 0.5 + el.id / 5 + 's'}"
+        :style="{animationDuration: 0.5 + el.id / 6 + 's'}"
         class="w-12/12 content rounded-md border sm:border-0 border-gray-700 mt-4 p-4 backdrop-blur-sm backdrop-brightness-75 sm:backdrop-brightness-100">
         <h1
           class="font-bold text-lg sm:text-xl md:text-2xl text-center md:text-left">
