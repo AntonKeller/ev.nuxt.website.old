@@ -2,7 +2,13 @@
   <div
     class="overflow-y-scroll h-screen background px-2.5 pb-8 md:pt-24 lg:pt-20 flex justify-center items-start">
 
-    <div class="h-screen text-gray-200 flex flex-row flex-wrap justify-center items-center w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-7/12">
+    <div class="h-screen pt-20 text-gray-200 flex flex-row flex-wrap justify-center items-center w-11/12 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12">
+
+
+      <div class="h-56 w-full bg-red-800 text-gray-300">
+
+      </div>
+
 
       <div
         v-for="el of mainContent"
