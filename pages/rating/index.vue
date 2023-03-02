@@ -1,40 +1,26 @@
 <template>
-  <div class="min-h-screen bg-gray-900 pt-6 md:pt-28 back">
-    <div class="pl-4 pr-4 md:pl-12 md:pr-12 lg:pl-32 lg:pr-32 xl:pl-56 xl:pr-56 w-auto flex flex-col items-center backdrop-blur-lg overflow-hidden ">
+  <div class="h-screen">
+    <div
+      class="overflow-y-scroll h-screen back pl-4 pr-4 md:pl-12 md:pr-12 lg:pl-32 lg:pr-32 xl:pl-56 xl:pr-56 w-auto overflow-hidden pt-6 md:pt-28">
 
-      <div class="w-full flex overflow-x-scroll md:overflow-auto md:flex-wrap md:w-full md:justify-center years-buttons backdrop-blur-sm md:pb-6">
+      <div class="w-full overflow-x-scroll flex md:flex-wrap md:w-full md:justify-center text-red-50 font-extrabold">
         <div
-          v-for="element of rating"
-          @click="setActiveButtonYear(element.year)"
-          :class="{'bg-red-800 ease-out ': activeButtonYear !== element.year}"
-          class="flex justify-center items-center transition-all cursor-pointer hover:bg-transparent border-2 border-red-800 text-gray-300 rounded-sm p-4 pt-2 pb-2 m-2 first:ml-0 md:text-lg">
-          <span class="select-none duration-150 ease-in transition-all" :class="{'-rotate-90': activeButtonYear === element.year}"><</span>
+          class="flex bg-red-800 rounded-md justify-center items-center duration-150 cursor-pointer hover:bg-transparent border-2 border-red-800 rounded-sm px-4 pt-2 pb-2 m-2 first:ml-0 md:text-lg"
+          v-for="element of getRatingYears()"
+          @click="setActiveYear(element.year)">
+          <span class="select-none" :class="{'-rotate-90': activeYear === element.year}"><</span>
           <h3 class="ml-5">{{ element.year }}</h3>
         </div>
       </div>
 
-      <p class="text-gray-300 text-base md:text-lg text-center">
-        Наши специалисты успешно осуществили и завершили проекты для 45 компаний из рейтинга «Крупнейшие компании России» (рейтинг Эксперт-400),
-        совокупная выручка которых за 2008 год превысила 9.3 трлн. руб. Основным деловым преимуществом нашей компании является высокий профессионализм
-        сотрудников, а также опыт выполнения проектов в сфере оценки и консалтинга с последующим согласованием результатов с крупнейшими международными
-        аудиторскими компаниями. Специалисты Компании Everest Consulting являются членами таких профессиональных организаций, как Саморегулируемая
-        Межрегиональная Ассоциация Оценщиков (СМАО),  Восточно-Европейский союз экспертов (OSV), а также получили квалификации Американского общества оценщиков (ASA).
-      </p>
 
-      <div
-        v-for="element of rating"
-        :class="{'hidden':activeButtonYear !== element.year}"
-        class="overflow-y-scroll md:overflow-auto w-full md:mt-2 lg:mt-4 text-base md:text-lg">
-        <div v-for="key of element.keys" class="ratingShowAnimate">
-            <div class="flex flex-col md:flex-row mt-4 items-center">
-              <div class="text-gray-800 rounded-sm bg-gray-300 w-full md:max-h-10 flex text-center md:text-left justify-center md:justify-start items-center p-3 md:p-6">
-                {{ key.title }}
-              </div>
-
-              <div class="text-gray-300 rounded-sm bg-red-800 w-full md:w-16 h-4 md:max-h-12 md:ml-3 flex justify-center items-center p-4 md:p-6">
-                {{ key.value || "-" }}
-              </div>
-            </div>
+      <div class="flex flex-row flex-wrap w-full items-end justify-evenly">
+        <div class="ratingShowAnimate w-full flex flex-col justify-center items-center m-1 p-2 md:p-4 text-xl md:w-5/12 lg:w-3/12 text-red-50 border-b-4 border-b-red-50"
+             v-for="description of getDescriptionOfActiveYear()">
+          <div class="flex justify-center items-center text-center w-16 h-16 font-extrabold text-lg md:text-xl  lg:text-3xl rounded-full border-8 border-red-700">
+            <p>{{ description.value }}</p>
+          </div>
+          <div class="text-center">{{ description.title }}</div>
         </div>
       </div>
 
@@ -56,18 +42,33 @@ export default {
   data() {
     return {
       rating,
-      activeButtonYear: Number,
-      isActiveMenu: true
+      activeYear: Number,
     }
   },
 
   mounted() {
-    this.activeButtonYear = 2021;
+    this.activeYear = 2021;
   },
 
   methods: {
-    setActiveButtonYear(id) {
-      this.activeButtonYear = id;
+
+    getRatingYears() {
+      return this.rating.map(el => {
+        return {
+          id: el.id,
+          year: el.year,
+        }
+      })
+    },
+
+    getDescriptionOfActiveYear() {
+      let buff = this.rating.filter(el => el.year === this.activeYear);
+      if (buff.length === 0) return null;
+      return buff[0].description;
+    },
+
+    setActiveYear(id) {
+      this.activeYear = id;
     }
   },
 }
@@ -76,7 +77,7 @@ export default {
 <style scoped>
 
 .back {
-  background: center/cover url("@/assets/background/b-2.png") no-repeat;
+  background: url("@/assets/background/bg-red-and-gray-lines.png") no-repeat center / cover;
 }
 
 .ratingShowAnimate {

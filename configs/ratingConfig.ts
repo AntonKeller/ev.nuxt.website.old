@@ -1,10 +1,21 @@
 import {ratingDescription} from "~/utils/types";
 
-export const rating: Array<ratingDescription> = [
+export interface RatingDescriptionKeysType {
+  title: string,
+  value: string,
+}
+
+export interface RatingType {
+  id: number,
+  year: number,
+  description: Array<RatingDescriptionKeysType>,
+}
+
+export const rating: Array<RatingType> = [
   {
     id: 1,
     year: 2021,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "9"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "15"},
       {title: "Оценка бизнеса и ценных бумаг", value: "9"},
@@ -20,7 +31,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 2,
     year: 2020,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "9"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "11"},
       {title: "Оценка бизнеса и ценных бумаг", value: "18"},
@@ -35,7 +46,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 3,
     year: 2019,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "14"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "15"},
       {title: "Оценка бизнеса и ценных бумаг", value: "99"},
@@ -50,7 +61,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 4,
     year: 2018,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "8"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "13"},
       {title: "Переоценка основных средств / оценка в целях МСФО", value: "1"},
@@ -60,7 +71,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 5,
     year: 2017,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "11"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "21"},
       {title: "Переоценка основных средств / оценка в целях МСФО", value: "2"},
@@ -70,7 +81,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 6,
     year: 2016,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "13"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "26"},
       {title: "Переоценка основных средств / оценка в целях МСФО", value: "1"},
@@ -80,7 +91,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 7,
     year: 2015,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "24"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "43"},
       {title: "Переоценка основных средств / оценка в целях МСФО", value: "2"},
@@ -90,7 +101,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 8,
     year: 2014,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "21"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "59"},
       {title: "Переоценка основных средств / оценка в целях МСФО", value: "2"},
@@ -100,7 +111,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 9,
     year: 2013,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "41"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "59"},
       {title: "Переоценка основных средств / оценка в целях МСФО", value: "7"},
@@ -109,7 +120,7 @@ export const rating: Array<ratingDescription> = [
   {
     id: 10,
     year: 2012,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "44"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "66"},
       {title: "Переоценка основных средств / оценка в целях МСФО", value: "10"},
@@ -118,10 +129,10 @@ export const rating: Array<ratingDescription> = [
   {
     id: 11,
     year: 2011,
-    keys: [
+    description: [
       {title: "Рэнкинг крупнейших оценочных организаций", value: "59"},
       {title: "Рэнкинг делового потенциала оценочных организаций", value: "76"},
     ]
-  },
+  }
 ]
 
