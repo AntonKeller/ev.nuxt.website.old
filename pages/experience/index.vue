@@ -1,28 +1,31 @@
 <template>
   <div class="bg">
-    <div class="h-screen w-screen flex flex-col justify-center items-center">
+
+    <div class="h-screen w-full flex flex-col justify-start">
 
       <div
-        class="basis-3/12 w-10/12 font-bold hidden md:flex flex-row items-end text-gray-300 text-lg uppercase h-full md:pt-24">
+        class="overflow-x-scroll font-bold flex flex-row items-start text-gray-300 text-lg uppercase md:pt-24">
         <div
           v-for="tab of tabs"
           :key="tab.id"
-          :style="{animationDuration: 0.5 + tab.id / 10 + 's'}"
           @click.left="activeTab = tab.id"
           :class="{'backdrop-brightness-75': activeTab === tab.id}"
-          class="text-center border-t border-t-gray-600 lg:text-xl tab-transition duration-300 hover:backdrop-brightness-75 cursor-pointer border-b border-b-gray-600 p-6 w-full">
+          class="text-center border border-gray-600 text-base md:text-lg tab-transition duration-300 hover:backdrop-brightness-75 cursor-pointer border-b border-b-gray-600 p-6 w-full">
           {{ tab.value }}
         </div>
       </div>
 
-      <div class="basis-9/12 w-10/12 h-screen flex flex-row flex-wrap justify-center items-center overflow-y-scroll md:pt-10">
+
+      <div class="flex overflow-x-scroll border-b border-b-gray-600">
+
         <img
-          v-for="logotype of logotypes"
+          class="whitespace-nowrap break hover:opacity-50 img-animate p-4 object-contain w-48 h-48"
+          v-for="logotype of getTabLogotypes()"
           :key="logotype.id"
           :style="{animationDuration: 0.7 + logotype.id / 10 + 's'}"
-          :src="require(`./../../assets/experience_logotypes/${logotype.name}.png`)"
-          class="hover:opacity-50 img-animate p-4 object-contain object-center"
+          :src="require(`./../../assets/experience_logotypes/${logotype.img}.png`)"
           alt="no image">
+
       </div>
 
     </div>
@@ -32,31 +35,25 @@
 
 <script>
 
-import {tabs, logotypes} from "@/configs/experience"
+import {tabs} from "@/configs/experience"
 
 export default {
 
   name: "experience",
 
-  methods: {},
-
-  mounted() {
-    // setInterval(() => {
-    //   if (this.tabs.length === this.activeTab) this.activeTab = 0
-    //
-    //   this.activeTab += 1;
-    //
-    // }, 1000);
-  },
-
   data() {
     return {
-      tabs: tabs,
-      logotypes: logotypes,
-      activeTab: 0,
+      tabs,
+      activeTab: 1,
     }
-  }
+  },
 
+  methods: {
+    getTabLogotypes() {
+      let tab = this.tabs.filter(el => el.id === this.activeTab);
+      return tab[0].logotypes;
+    }
+  },
 }
 </script>
 
