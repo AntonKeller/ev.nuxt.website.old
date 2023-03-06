@@ -1,12 +1,5 @@
 import {TTabContent, TTab} from "~/utils/types";
 
-// interface TContentObject {
-//   title: String,
-//   descriptions: Array<TDescription>,
-//   enums: Array<String>,
-//   underline: Boolean
-// }
-
 export const serviceTabContent: Array<TTabContent> = [
   { // first tab
     id: 1,  // tab id
