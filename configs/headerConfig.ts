@@ -19,11 +19,5 @@ export const navLinks: Array<Tlink> = [
     description: "по периодам",
     url: "/rating",
   },
-  {
-    id: 4,
-    title: "О нас",
-    description: "описание",
-    url: "/about",
-  },
 ];
 
