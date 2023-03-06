@@ -12,7 +12,7 @@ interface TabType {
 export const tabs: Array<TabType> = [
   {
     id: 1,
-    value: "оценка бизнеса",
+    value: "оценка бизнеса, оценка имущественных активов",
     logotypes: [
       {id: 1, img: "inter-rao"},
       {id: 2, img: "rosatom"}
@@ -20,14 +20,6 @@ export const tabs: Array<TabType> = [
   },
   {
     id: 2,
-    value: "оценка имущественных активов",
-    logotypes: [
-      {id: 1, img: "inter-rao"},
-      {id: 2, img: "rosatom"}
-    ]
-  },
-  {
-    id: 3,
     value: "оценка",
     logotypes: [
       {id: 1, img: "moskowkiy-bank"},
@@ -41,7 +33,7 @@ export const tabs: Array<TabType> = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     value: "строительный аудит",
     logotypes: [
       {id: 1, img: "pcb"},
@@ -54,31 +46,19 @@ export const tabs: Array<TabType> = [
     ]
   },
   {
+    id: 4,
+    value: "строительная экспертиза, технологическая экспертиза",
+    logotypes: [
+      {id: 1, img: "otkritie-bank"},
+      {id: 2, img: "cb-rf"},
+      {id: 3, img: "almaz-antay"},
+      {id: 4, img: "turizm-rf"},
+      {id: 5, img: "frp"},
+      {id: 6, img: "rosteh"}
+    ]
+  },
+  {
     id: 5,
-    value: "строительная экспертиза",
-    logotypes: [
-      {id: 1, img: "otkritie-bank"},
-      {id: 2, img: "cb-rf"},
-      {id: 3, img: "almaz-antay"},
-      {id: 4, img: "turizm-rf"},
-      {id: 5, img: "frp"},
-      {id: 6, img: "rosteh"}
-    ]
-  },
-  {
-    id: 6,
-    value: "технологическая экспертиза",
-    logotypes: [
-      {id: 1, img: "otkritie-bank"},
-      {id: 2, img: "cb-rf"},
-      {id: 3, img: "almaz-antay"},
-      {id: 4, img: "turizm-rf"},
-      {id: 5, img: "frp"},
-      {id: 6, img: "rosteh"}
-    ]
-  },
-  {
-    id: 7,
     value: "финансово-технический надзор",
     logotypes: [
       {id: 1, img: "pcb"}
