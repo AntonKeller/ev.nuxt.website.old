@@ -1,20 +1,23 @@
-import {link} from "~/utils/types";
+import {Tlink} from "~/utils/types";
 
-export const links: Array<link> = [
+export const navLinks: Array<Tlink> = [
   {
+    id: 1,
     title: "Услуги",
-    description: "множество услуг",
-    url: "/services"
+    description: "описание",
+    url: "/services",
   },
   {
-    title: "Опыт компании",
-    description: "лидер оценки",
-    url: "/experience"
+    id: 2,
+    title: "Опыт",
+    description: "наши клиенты",
+    url: "/experience",
   },
   {
-    title: "О нас",
-    description: "Юридическая информация",
-    url: "/about"
+    id: 3,
+    title: "Достижения",
+    description: "по периодам",
+    url: "/rating",
   },
 ];
 
