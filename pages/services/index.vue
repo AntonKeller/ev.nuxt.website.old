@@ -1,14 +1,14 @@
 <template>
   <div
-    class="flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start h-screen md:pl-6 lg:pl-8 xl:pl-10 background">
+    class="pb-2 h-[calc(100vh-57px)] sm:h-[calc(100vh-77px)] md:h-screen flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start md:pl-6 lg:pl-8 xl:pl-10 background overflow-y-scroll">
 
     <div class="hidden w-4/12 md:flex flex-col justify-center items-start border-r border-r-gray-600 md:pt-32">
       <ul class="w-full flex flex-col justify-center items-start">
         <li
+          class="hover:text-red-700 cursor-pointer show-left font-bold text-lg lg:text-xl mb-4 text-red-50 text-center w-full transition-colors duration-150"
           v-for="tab of serviceTabs"
           @click="activeTab=tab.id"
-          :class="{'uppercase mt-4':tab.sub, 'md:pl-10':!tab.sub}"
-          class="hover:text-red-700 cursor-pointer show-left font-bold text-lg lg:text-xl mb-4 text-gray-300 text-center w-full transition-colors duration-150">
+          :class="{'uppercase mt-4':tab.sub, 'md:pl-10':!tab.sub}">
           {{ tab.title }}
           <div v-if="tab.id === 8" class="w-full gray-line"></div>
         </li>
@@ -17,22 +17,22 @@
 
 
     <div
-      class="md:hidden w-full flex flex-col justify-start text-gray-300 text-lg text-center p-6 pl-4 pr-4 sm:pl-10 sm:pr-10">
+      class="md:hidden w-full flex flex-col justify-start text-red-50 text-lg text-center p-4 sm:px-10">
       <div
         @click="dropMenuIsOpen=!dropMenuIsOpen"
-        class="border border-gray-600 w-full rounded-lg flex flex-row justify-between p-2 pl-4 pr-4">
+        class="border border-gray-600 w-full rounded-lg flex flex-row justify-between p-2 px-4">
         <div>Услуги</div>
         <div :class="{'-rotate-90': dropMenuIsOpen}" class="duration-150"><</div>
       </div>
       <div
         v-if="dropMenuIsOpen"
-        class="rounded-lg border-t border-t-gray-900 border-l border-r border-b border-l-gray-600 border-b-gray-600 border-r-gray-600  pl-4 pr-4">
+        class="rounded-lg border-t border-t-gray-900 border-x border-b border-l-gray-600 border-b-gray-600 border-r-gray-600 px-4">
         <ul class="w-full flex flex-col justify-center items-start">
           <li
             v-for="tab of serviceTabs"
             @click="serviceSelect(tab.id)"
             :class="{'uppercase mt-4':tab.sub, 'pl-10':!tab.sub}"
-            class="cursor-pointer show-left font-bold text-base mb-4 text-gray-300 text-center w-full transition-colors">
+            class="cursor-pointer show-left font-bold text-base mb-4 text-red-50 text-center w-full transition-colors">
             {{ tab.title }}
             <div v-if="tab.id === 8" class="w-full border-b border-b-gray-600"></div>
           </li>
@@ -43,42 +43,61 @@
     <div
       v-for="currentTab of serviceTabContent"
       v-if="activeTab===currentTab.id"
-      class="w-full md:w-8/12 pl-5 pr-5 sm:pl-11 sm:pr-11 md:pl-18 md:pr-18 lg:pl-24 lg:pr-24 xl:pl-28 xl:pr-28 md:pt-32 flex flex-col justify-start items-start">
+      class="w-full md:w-8/12 px-5 sm:px-10 md:px-16 lg:px-24 xl:px-28 md:pt-32 flex flex-col justify-start items-start text-red-50">
 
-      <div v-for="content of currentTab.content" class="pb-10 flex flex-col justify-start items-start md:max-w-full">
-        <h4 v-if="content.title.length" class="show-left font-bold text-2xl mb-4 text-gray-300 text-center mb-4">
+      <div v-for="content of currentTab.content" class="flex flex-col justify-start items-start md:max-w-full">
+
+        <h4 v-if="content.title.length" class="show-left font-bold text-2xl mb-4">
           {{ content.title }}
         </h4>
 
-        <div v-if="content.underline" class="w-full red-line"></div>
+        <div v-if="content.underline" class="w-full gray-line"></div>
 
-        <p v-if="content.textContent.length" v-for="text of content.textContent" class="text-lg text-gray-300 mb-6">
-          {{ text }}
-        </p>
+        <p v-if="content.textContent.length" v-for="text of content.textContent" class="text-lg mb-6">{{ text }}</p>
 
-        <ul v-if="content.enums.length" class="text-gray-300 mt-4">
-          <li v-for="enumValue of content.enums" class="text-base text-lg">
+        <ul v-if="content.enums.length" class="text-red-50 mt-4">
+          <li v-for="enumValue of content.enums" class="text-lg">
             <span class="inline-block  w-4 h-2 rounded-sm red-line-heavy"></span>
             {{ enumValue }}
           </li>
         </ul>
       </div>
-
     </div>
 
+    <!--    <evFooter />-->
+
   </div>
-
-
 </template>
 
 <script>
 
 import {serviceTabContent, serviceTabs} from "@/configs/servicesConfig"
+import evFooter from "@/components/widgets/ev-footer"
 
 export default {
   name: "services",
 
-  components: {},
+  head() {
+    return {
+      title: "Наши услуги",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Оценка нематериальных активов, бизнеса, материальных активов (недвижимое имущество, машины и оборудование, транспортные средства и пр.)",
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: "https://antonkeller.github.io/ev_nuxtjs_website_page-1/services",
+        },
+      ],
+    }
+  },
+
+  components: {
+    evFooter: evFooter,
+  },
 
   methods: {
     serviceSelect(id) {
@@ -97,16 +116,18 @@ export default {
     }
   },
 }
+
+
 </script>
 
 <style scoped>
 
-*::-webkit-scrollbar {
-  width: 0;
-}
+/**::-webkit-scrollbar {*/
+/*  width: 0;*/
+/*}*/
 
 .background {
-  background: url("@/assets/background/background-opacity-25-35.png") transparent no-repeat center / cover;
+  background: url("@/assets/background/background-red-circles.png") transparent no-repeat center / cover;
 }
 
 .red-line, .gray-line {

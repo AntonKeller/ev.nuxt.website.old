@@ -11,15 +11,16 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ev_nuxt_js_website',
+    title: 'Оценочная компания ООО "Эверест Консалтинг", работаем с 2010 года.', // ev_nuxt_js_website
     htmlAttrs: {
       lang: 'ru'
     },
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: ''},
-      {name: 'format-detection', content: 'telephone=no'}
+      {hid: 'description', name: 'description', content: "Занимаемся оценкой нематериальных активов, оценка бизнеса, Оценка материальных активов (недвижимое имущество, машины и оборудование, транспортные средства и пр.). Для целей страхования,кредитования под залог, Переоценка основных средств для целей бухгалтерского учета и подготовки финансовой   отчетности в соответствии с требованиями РСБУ / ПБУ"},
+      {name: 'format-detection', content: 'telephone=+79516962121'},
+      {name: 'author', content: 'ООО "Эверест консалтинг" '}
     ],
     link: [
       {

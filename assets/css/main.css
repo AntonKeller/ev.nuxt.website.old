@@ -15,9 +15,32 @@ body {
 }
 
 .home-enter-active, .home-leave-active {
-  transition: opacity .5s;
+  transition: opacity .5s ease;
+
 }
 
 .home-enter, .home-leave-active {
   opacity: 0;
+}
+
+@keyframes years-buttons-animate {
+  from {
+    transform: translateX(100vw);
+  }
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.3s ease;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.3s reverse  ease;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
