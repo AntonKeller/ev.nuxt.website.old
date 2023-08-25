@@ -13,11 +13,12 @@
         </div>
       </div>
 
-
       <div class="flex flex-row flex-wrap w-full items-end justify-evenly">
-        <div class="ratingShowAnimate w-full flex flex-col justify-center items-center m-1 p-2 md:p-4 text-xl md:w-5/12 lg:w-3/12 text-red-50 border-b-4 border-b-red-50"
-             v-for="description of getDescriptionOfActiveYear()">
-          <div class="flex justify-center items-center text-center w-16 h-16 font-extrabold text-lg md:text-xl  lg:text-3xl rounded-full border-8 border-red-700">
+        <div
+          class="ratingShowAnimate w-full flex flex-col justify-center items-center m-1 p-2 md:p-4 text-xl md:w-5/12 lg:w-3/12 text-red-50 border-b-4 border-b-red-50"
+          v-for="description of getDescriptionOfActiveYear()">
+          <div
+            class="flex justify-center items-center text-center w-16 h-16 font-extrabold text-lg md:text-xl  lg:text-3xl rounded-full border-8 border-red-700">
             <p>{{ description.value }}</p>
           </div>
           <div class="text-center">{{ description.title }}</div>
