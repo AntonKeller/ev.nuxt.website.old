@@ -1,22 +1,21 @@
 <template>
+  <!--  h-[calc(100vh-57px)] sm:h-[calc(100vh-77px)]-->
   <div
-    class="bg-[#222126] h-[calc(100vh-57px)] sm:h-[calc(100vh-77px)] md:h-screen w-full text-gray-900 overflow-y-scroll flex flex-col items-center">
-
-
+    class="bg-[#222126] w-full text-gray-900 overflow-y-scroll flex flex-col items-center">
 
     <!--  БЛОК 1  -->
-    <div class="py-36 px-16 background w-full">
+    <div class="py-36 px-16 background w-full h-screen flex flex-col justify-center">
 
-      <div class="absolute bottom-0 bg-words font-extrabold">эверест</div>
+      <div class="relative z-0 bg-transparent flex flex-col justify-center">
 
-      <div class="relative z-0 bg-transparent">
+        <div class="title text-gray-100 w-auto flex flex-col justify-center content-center">
 
-        <div class="title text-gray-100 w-auto">
-          <!--Everest consulting-->
-          <h1 style="text-shadow: black 1px 4px 6px"
-              class="font-extrabold text-3xl sm:text-4xl md:text-4xl lg:text-5xl">Эверест Консалтинг</h1>
-          <h2 style="text-shadow: black 1px 4px 6px"
-              class="mt-2 font-extrabold text-xl sm:text-xl md:text-3xl lg:text-3xl opacity-75">Работаем с 2010 года</h2>
+          <h1 class="txt-shadow font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            Эверест Консалтинг
+          </h1>
+          <h2 class="txt-shadow mt-2 font-extrabold text-xl sm:text-xl md:text-3xl lg:text-3xl opacity-75">
+            Работаем с 2010 года
+          </h2>
 
           <button
             style="text-shadow: black 1px 2px 6px"
@@ -71,15 +70,15 @@
         <!--        <div class="mt-10 z-0 book"></div>-->
 
 
-
-        <div class="mt-10 border opacity-75 border-dashed border-gray-50 flex flex-row text-center font-extrabold flex text-5xl text-gray-50 w-1/6">
+        <div
+          class="mt-10 border opacity-75 border-dashed border-gray-50 flex flex-row text-center font-extrabold flex text-5xl text-gray-50 w-1/6">
           <div class="flex flex-col mr-auto">
             <h4>100%</h4>
-<!--            <div class="mt-2 bg-red-900 w-32 h-4 rounded-2xl"></div>-->
+            <!--            <div class="mt-2 bg-red-900 w-32 h-4 rounded-2xl"></div>-->
           </div>
           <div class="flex flex-col">
             <h4>75%</h4>
-<!--            <div class="mt-2 bg-red-900 w-32 h-4 rounded-2xl"></div>-->
+            <!--            <div class="mt-2 bg-red-900 w-32 h-4 rounded-2xl"></div>-->
           </div>
         </div>
 
@@ -103,8 +102,10 @@
           <h4 class="font-extrabold text-2xl">Наша компания</h4>
           <div class="mt-4">
             Компания Эверест Консалтинг создана в 2010 году.
-            Учредители компании ранее занимали руководящие позиции в группе оценки российского подразделения международной аудиторской компании
-            <span class="bg-gray-50 text-red-900 p-2 tracking-wider inline-block rounded-sm">«PricewaterhouseCoopers».</span>
+            Учредители компании ранее занимали руководящие позиции в группе оценки российского подразделения
+            международной аудиторской компании
+            <span
+              class="bg-gray-50 text-red-900 p-2 tracking-wider inline-block rounded-sm">«PricewaterhouseCoopers».</span>
           </div>
         </div>
 
@@ -244,8 +245,7 @@ export default {
 }
 
 .background {
-  /*background: #222126 top / cover no-repeat fixed url("@/assets/background/main_page/ev-bg-13.png");*/
-  background: top / cover no-repeat fixed url("@/assets/background/main_page/ev-bg-13.png");
+  background: top / cover no-repeat fixed url("@/assets/background/main_page/ev-bg-mauntain.jpg");
   border: 1px dashed white;
 }
 
@@ -253,15 +253,15 @@ export default {
   color: #1f1e22;
 }
 
-.bg-people {
-  opacity: 0.35;
-  width: 950px;
-  height: 950px;
-  position: absolute;
-  top: 5em;
-  right: 0;
-  background: top / contain no-repeat url("@/assets/background/main_page/people.png");
-}
+/*.bg-people {*/
+/*  opacity: 0.35;*/
+/*  width: 950px;*/
+/*  height: 950px;*/
+/*  position: absolute;*/
+/*  top: 5em;*/
+/*  right: 0;*/
+/*  background: top / contain no-repeat url("@/assets/background/main_page/people.png");*/
+/*}*/
 
 .book {
   position: absolute;
@@ -276,6 +276,10 @@ export default {
 
 .title {
   animation: show-title-animate ease 0.95s;
+}
+
+.txt-shadow {
+  text-shadow: #4d4d56 2px 4px 5px;
 }
 
 @keyframes show-title-animate {

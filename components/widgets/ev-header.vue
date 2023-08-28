@@ -1,9 +1,9 @@
 <template>
   <!--fixed top-0-->
-  <header class="flex flex-col items-stretch z-50">
-
+  <header class="flex flex-col items-stretch z-50 absolute w-full bg-transparent">
+    <!--      bg-[#222126]-->
     <div
-      class="bg-[#222126] z-20 w-full flex items-center justify-between sm:justify-between md:justify-between border-b border-b-gray-700 p-2 sm:p-4 md:pl-11 md:pr-11 z-10 backdrop-blur-sm transition-all text-black md:text-red-50">
+      class=" z-20 w-full flex items-center justify-between sm:justify-between md:justify-between p-2 sm:p-4 md:pl-11 md:pr-11 z-10 backdrop-blur-sm transition-all text-black md:text-red-50">
 
       <NuxtLink class="move sm:mr-auto ml-1 sm:ml-5 flex justify-center items-center" to="/">
         <img @click="activePage=0" class="select-none w-12 h-10 sm:w-20 sm:h-11 md:w-24 md:h-12"
