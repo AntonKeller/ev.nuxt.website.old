@@ -1,87 +1,97 @@
 <template>
   <!--  h-[calc(100vh-57px)] sm:h-[calc(100vh-77px)]-->
-  <div
-    class="bg-[#222126] w-full text-gray-900 overflow-y-scroll flex flex-col items-center">
+  <div class="bg-gray-800 w-full overflow-y-scroll flex flex-col items-center">
+
 
     <!--  БЛОК 1  -->
-    <div class="py-36 px-16 background w-full h-screen flex flex-col justify-center">
+    <div
+      class="relative px-2 py-2.5 sm:px-4 md:px-16 lg:px-32 background w-full h-[calc(100vh-70px)] flex flex-col justify-center">
 
-      <div class="relative z-0 bg-transparent flex flex-col justify-center">
+      <div class="flicker absolute bottom-0 left-[calc(49.55%)] select-none cursor-pointer text-gray-300 text-8xl rotate-90 border border-gray-300">
+        <span class="inline-block -translate-y-1.5 py-6"> > </span>
+      </div>
 
-        <div class="title text-gray-100 w-auto flex flex-col justify-center content-center">
+      <!--  ЗАГОЛОВОК С КНОПКОЙ  -->
+      <div class="title text-gray-800 font-extrabold flex flex-col justify-center">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+          Эверест Консалтинг
+        </h1>
 
-          <h1 class="txt-shadow font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            Эверест Консалтинг
-          </h1>
-          <h2 class="txt-shadow mt-2 font-extrabold text-xl sm:text-xl md:text-3xl lg:text-3xl opacity-75">
-            Работаем с 2010 года
-          </h2>
-
+        <div class="text-base sm:text-lg md:text-xl lg:text-2xl mt-2.5">
+          <h2>Работаем с 2010 года</h2>
           <button
-            style="text-shadow: black 1px 2px 6px"
-            class="opacity-90 shadow-2xl hover:bg-transparent transition-all duration-300 font-extrabold text-gray-50 text-2xl mt-6 px-12 py-2 border-2 bg-red-900 border-red-900 rounded-sm">
+            class="hover:bg-transparent transition-all duration-300 mt-3.5 px-6 py-2 border-2 bg-gray-50 border-gray-800 rounded-md">
             Связаться с нами
           </button>
         </div>
 
-        <div class="mt-10 flex flex-row gap-24 justify-between text-gray-50 text-xl text-center">
-          <div>
-            <h4 class="font-extrabold text-2xl">Lorem ipsum dolor.</h4>
-            <div class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus architecto aut
-              consectetur debitis delectus, deserunt distinctio dolore dolores dolorum eius enim impedit ipsum modi
-              molestiae, nemo nobis nulla numquam officiis perspiciatis placeat possimus quae quam quidem quisquam quo
-              reiciendis reprehenderit saepe sapiente sint tempore tenetur vel, voluptate? Alias animi beatae
-              exercitationem facilis ipsam possimus quae repellat sunt suscipit vero!
-            </div>
-          </div>
-          <div>
-            <h4 class="font-extrabold text-2xl">Lorem ipsum dolor.</h4>
-            <div class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus asperiores atque
-              consequatur cupiditate, delectus dicta dolore doloremque et ex expedita impedit in magni nemo neque
-              nesciunt nobis, odio odit placeat quasi quos ratione recusandae repudiandae saepe sapiente sequi sint
-              suscipit temporibus totam ut. Aliquam blanditiis cupiditate dolore ea fuga labore minus nesciunt optio
-              porro provident quae, quo saepe sunt!
-            </div>
-          </div>
-          <div>
-            <h4 class="font-extrabold text-2xl">Lorem ipsum dolor.</h4>
-            <div class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda at atque autem
-              commodi, distinctio dolorum eligendi enim, harum hic id illo iste iusto laborum libero magnam magni minima
-              minus necessitatibus nemo optio praesentium provident quia, quos ratione rem reprehenderit sed sit velit
-              voluptas! Ad aut distinctio, error et fuga porro repellat sit tempore? A eum minima nam quae unde!
-            </div>
+      </div>
+
+      <!--  ТЕКСТОВЫЕ СПИСКИ С ЗАГОЛОВКОМ  -->
+      <div class="mt-8 flex flex-col md:flex-row gap-2 md:gap-6 justify-between text-gray-300 text-center">
+        <div class="bg-[#1f2937e9] rounded-md px-8 pt-4 pb-10">
+          <h4 class="font-extrabold text-xl">Lorem ipsum dolor.</h4>
+          <div class="text-sm mt-1.5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus
+            architecto aut
+            consectetur debitis delectus, deserunt distinctio dolore dolores dolorum eius enim impedit ipsum modi
+            molestiae, nemo nobis nulla numquam officiis perspiciatis placeat possimus quae quam quidem quisquam quo
+            reiciendis reprehenderit saepe sapiente sint tempore tenetur vel, voluptate? Alias animi beatae
+            exercitationem facilis ipsam possimus quae repellat sunt suscipit vero!
           </div>
         </div>
 
-        <div></div>
-
-
-        <div class="z-50 mt-10 z-0 bg-people"></div>
-
-        <!--        <div class="bg-red-900 h-16 mt-10 rounded-2xl opacity-75 flex flex-row">-->
-        <!--          <div class="bg-gray-900 w-8 h-36"></div>-->
-        <!--          <div class="ml-4 bg-gray-900 w-12 h-48"></div>-->
-        <!--          <div class="ml-4 bg-gray-900 w-12 h-56"></div>-->
-        <!--          <div class="ml-4 bg-gray-900 w-12 h-64"></div>-->
-        <!--          <div class="ml-4 bg-gray-900 w-12 h-72"></div>-->
-        <!--          <div class="ml-4 bg-gray-900 w-12 h-80"></div>-->
-        <!--        </div>-->
-
-        <!--        <div class="mt-10 z-0 book"></div>-->
-
-
-        <div
-          class="mt-10 border opacity-75 border-dashed border-gray-50 flex flex-row text-center font-extrabold flex text-5xl text-gray-50 w-1/6">
-          <div class="flex flex-col mr-auto">
-            <h4>100%</h4>
-            <!--            <div class="mt-2 bg-red-900 w-32 h-4 rounded-2xl"></div>-->
-          </div>
-          <div class="flex flex-col">
-            <h4>75%</h4>
-            <!--            <div class="mt-2 bg-red-900 w-32 h-4 rounded-2xl"></div>-->
+        <div class="bg-gray-800 rounded-md px-8 pt-4 pb-10">
+          <h4 class="font-extrabold text-xl">Lorem ipsum dolor.</h4>
+          <div class="text-sm mt-1.5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus
+            asperiores atque
+            consequatur cupiditate, delectus dicta dolore doloremque et ex expedita impedit in magni nemo neque
+            nesciunt nobis, odio odit placeat quasi quos ratione recusandae repudiandae saepe sapiente sequi sint
+            suscipit temporibus totam ut. Aliquam blanditiis cupiditate dolore ea fuga labore minus nesciunt optio
+            porro provident quae, quo saepe sunt!
           </div>
         </div>
 
+        <div class="bg-[#1f2937e9] rounded-md px-8 pt-4 pb-10">
+          <h4 class="font-extrabold text-xl">Lorem ipsum dolor.</h4>
+          <div class="text-sm mt-1.5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda at
+            atque autem
+            commodi, distinctio dolorum eligendi enim, harum hic id illo iste iusto laborum libero magnam magni minima
+            minus necessitatibus nemo optio praesentium provident quia, quos ratione rem reprehenderit sed sit velit
+            voluptas! Ad aut distinctio, error et fuga porro repellat sit tempore? A eum minima nam quae unde!
+          </div>
+        </div>
+      </div>
+
+      <div></div>
+
+
+      <div class="z-50 mt-10 z-0 bg-people"></div>
+
+      <!--        <div class="bg-red-900 h-16 mt-10 rounded-2xl opacity-75 flex flex-row">-->
+      <!--          <div class="bg-gray-900 w-8 h-36"></div>-->
+      <!--          <div class="ml-4 bg-gray-900 w-12 h-48"></div>-->
+      <!--          <div class="ml-4 bg-gray-900 w-12 h-56"></div>-->
+      <!--          <div class="ml-4 bg-gray-900 w-12 h-64"></div>-->
+      <!--          <div class="ml-4 bg-gray-900 w-12 h-72"></div>-->
+      <!--          <div class="ml-4 bg-gray-900 w-12 h-80"></div>-->
+      <!--        </div>-->
+
+      <!--        <div class="mt-10 z-0 book"></div>-->
+
+
+      <div
+        class="mt-10 border opacity-75 border-dashed border-gray-50 flex flex-row text-center font-extrabold flex text-3xl text-gray-50 w-1/6">
+        <div class="flex flex-col mr-auto">
+          <h4>100%</h4>
+          <!--            <div class="mt-2 bg-red-900 w-32 h-4 rounded-2xl"></div>-->
+        </div>
+        <div class="flex flex-col">
+          <h4>75%</h4>
+          <!--            <div class="mt-2 bg-red-900 w-32 h-4 rounded-2xl"></div>-->
+        </div>
       </div>
 
     </div>
@@ -89,7 +99,7 @@
 
     <!--  БЛОК 2  -->
     <div
-      class="z-40 bg-red-900 text-gray-50 py-36 px-16 font-extrabold flex flex-col items-center sm:flex-row sm:items-end duration-300">
+      class="px-2 py-2.5 sm:px-4 md:px-16 lg:px-32 background-2 w-full h-screen text-gray-50 py-36 px-16 font-extrabold flex flex-col items-center sm:flex-row sm:items-end duration-300">
 
       <img class="md:icon-animate mt-4 sm:mt-0 object-cover w-20 sm:w-24 md:w-32"
            src="../assets/stickers/company-sticker-red-50.png"
@@ -105,7 +115,7 @@
             Учредители компании ранее занимали руководящие позиции в группе оценки российского подразделения
             международной аудиторской компании
             <span
-              class="bg-gray-50 text-red-900 p-2 tracking-wider inline-block rounded-sm">«PricewaterhouseCoopers».</span>
+              class="bg-gray-50 text-red-900 p-2 tracking-wider inline-block rounded-sm">PriceWaterHouseCoopers</span>
           </div>
         </div>
 
@@ -129,6 +139,7 @@
     </div>
 
 
+    <!--  БЛОК 4  -->
     <div class="mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-4 sm:px-32 flex flex-col items-center w-12/12 sm:w-6/12">
       <h2 class="font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center border-b-4 md:border-b-8">
         Наши преимущества
@@ -136,6 +147,7 @@
     </div>
 
 
+    <!--  БЛОК 5  -->
     <div
       class="flex flex-col lg:flex-row items-center lg:items-start justify-center mt-0 sm:mt-4 lg:mt-8 w-full px-4">
       <div
@@ -155,6 +167,7 @@
     </div>
 
 
+    <!--  БЛОК 6  -->
     <div class="mt-2 sm:py-2 md:py-8 lg:py-8 px-4 sm:px-32 flex flex-col items-center w-12/12 sm:w-6/12">
       <h2
         class="font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center border-b-4 md:border-b-8 border-b-red-100">
@@ -163,34 +176,34 @@
     </div>
 
 
+    <!--  БЛОК 7  -->
     <div
       class="mt-2 mb-4 sm:mb-8 px-4 sm:px-20 md:px-6 w-full text-red-50 flex flex-col justify-start md:flex-row duration-300">
 
       <div class="mt-2 md:mt-0">
-        <img class="object-fill object-cover rounded-t-lg" src="../assets/avatars/avatar-1.webp" alt="no img">
-        <h3
-          class="font-extrabold px-2 py-2 md:py-4 rounded-b-lg text-xl lg:text-2xl text-center bg-red-800">
-          <span class="block py-1 my-1 text-lg lg:text-xl bg-gray-800 rounded-lg">Директор</span>
+        <img class="object-fill object-cover rounded-t-md" src="../assets/avatars/avatar-1.webp" alt="no img">
+        <div class="font-extrabold px-2 py-2 md:py-4 rounded-b-md bg-red-800">
+          <span class="block py-1 my-1 text-base lg:text-lg bg-gray-800 rounded-md">Директор</span>
           Иванов Генадий Викторович
-        </h3>
+        </div>
       </div>
 
       <div class="mt-2 md:mt-0 md:mx-4">
-        <img class="object-fill object-cover rounded-t-lg" src="../assets/avatars/avatar-2.jpg" alt="no img">
-        <h3
-          class="font-extrabold px-2 py-2 md:py-4 rounded-b-lg text-xl lg:text-2xl text-center bg-red-800">
-          <span class="block py-1 my-1 text-lg lg:text-xl bg-gray-800 rounded-lg">Генеральный директор</span>
-          Иванов Генадий Викторович
-        </h3>
+        <img class="object-fill object-cover rounded-t-md" src="../assets/avatars/avatar-2.jpg" alt="no img">
+        <div class="font-extrabold px-2 py-2 md:py-4 rounded-b-md bg-red-800">
+          <span
+            class="block p-2 my-1 text-base md:text-lg lg:text-xl bg-gray-800 rounded-md">Генеральный директор</span>
+          <p class="text-sm md:text-base lg:text-lg">Иванов Генадий Викторович</p>
+        </div>
       </div>
 
       <div class="mt-2 md:mt-0">
-        <img class="object-fill object-cover rounded-t-lg" src="../assets/avatars/avatar-3.jpg" alt="no img">
-        <h3
-          class="font-extrabold px-2 py-2 md:py-4 rounded-b-lg text-xl lg:text-2xl text-center bg-red-800">
-          <span class="block py-1 my-1 text-lg lg:text-xl bg-gray-800 rounded-lg">Директор</span>
-          Иванов Генадий Викторович
-        </h3>
+        <img class="object-fill object-cover rounded-t-md" src="../assets/avatars/avatar-3.jpg" alt="no img">
+        <div class="font-extrabold px-2 py-2 md:py-4 rounded-b-md bg-red-800">
+
+          <span class="block py-1 my-1 text-base lg:text-lg bg-gray-800 rounded-md">Директор</span>
+          <p class="text-sm md:text-base lg:text-lg">Иванов Генадий Викторович</p>
+        </div>
       </div>
     </div>
 
@@ -249,19 +262,26 @@ export default {
   border: 1px dashed white;
 }
 
-.bg-words {
-  color: #1f1e22;
+.background-2 {
+  background: top / cover no-repeat fixed url("@/assets/background/main_page/ev-bg-20.jpg");
+  border: 1px dashed white;
 }
 
-/*.bg-people {*/
-/*  opacity: 0.35;*/
-/*  width: 950px;*/
-/*  height: 950px;*/
-/*  position: absolute;*/
-/*  top: 5em;*/
-/*  right: 0;*/
-/*  background: top / contain no-repeat url("@/assets/background/main_page/people.png");*/
-/*}*/
+.flicker {
+  animation: anim-flicker 2.5s infinite;
+}
+
+@keyframes anim-flicker {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 
 .book {
   position: absolute;
@@ -285,7 +305,6 @@ export default {
 @keyframes show-title-animate {
   from {
     opacity: 0;
-    border-bottom: 0;
   }
 }
 
