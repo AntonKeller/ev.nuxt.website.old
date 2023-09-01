@@ -1,13 +1,14 @@
 <template>
-  <header
-    class="w-full flex flex-col items-stretch bg-gray-50 sm:bg-gray-800 px-2 py-2.5 sm:px-4 md:px-16 lg:px-32">
-    <div
-      class="border-b border-b-gray-200 sm:border-b-gray-800 z-20 w-full flex items-center justify-center sm:justify-between transition-all md:text-red-50">
 
-      <NuxtLink class="ml-auto sm:ml-0 sm:mr-auto flex justify-center items-center" to="/">
-        <img @click="activePage=0" class="hidden sm:block select-none w-12 h-10 sm:w-20 sm:h-11 md:w-24 md:h-12"
+  <header
+    class="overflow-hidden fixed top-0 left-0 right-0 z-20 sm:static border-4 sm:border-0 border-gray-600 flex flex-col items-stretch bg-gray-50 sm:bg-gray-800 rounded-3xl mt-3 sm:m-0 mx-3 py-2.5 px-4 sm:px-8 md:px-4 lg:px-4 xl:px-12">
+    <div
+      class=" z-20 w-full flex items-center justify-center sm:justify-between transition-all md:text-red-50">
+
+      <NuxtLink class="sm:ml-0 sm:mr-auto flex justify-center items-center" to="/">
+        <img @click="activePage=0" class="hidden sm:block select-none w-10 h-10 sm:w-16 sm:h-8 md:w-20 md:h-10"
              src="@/assets/images/logotype-2.png" alt="img err">
-        <h2 class="md:ml-6 font-extrabold text-xl text-gray-800 sm:text-gray-50">
+        <h2 class="sm:ml-3 md:ml-6 font-extrabold text-base lg:text-xl text-gray-800 sm:text-gray-50">
           Everest consulting
         </h2>
       </NuxtLink>
@@ -22,7 +23,7 @@
               <h5
                 :class="{'text-red-600': activePage === link.id}"
                 class="sm:text-xs md:text-sm lg:text-base font-bold">{{ link.title }}</h5>
-              <!--              <p class="hidden md:block sm:text-xs md:text-sm lg:text-base ">{{ link.description }}</p>-->
+              <!--<p class="hidden md:block sm:text-xs md:text-sm lg:text-base ">{{ link.description }}</p>-->
             </NuxtLink>
           </li>
         </ul>
@@ -34,21 +35,21 @@
       <!--      </div>-->
 
       <div @click="menuIsOpen=!menuIsOpen" class="ml-auto block sm:hidden flex items-center">
-        <svg class=" cursor-pointer w-10 h-10 sm:ml-4 text-red-800" xmlns="http://www.w3.org/2000/svg" fill="none"
+        <svg class=" cursor-pointer w-10 h-10 sm:ml-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none"
              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
         </svg>
       </div>
 
     </div>
+
     <!--    border-b border-b-gray-700-->
-    <div
-      v-if="menuIsOpen"
-      class="sm:hidden bg-transparent pt-4">
+
+    <div v-if="menuIsOpen" class="sm:hidden bg-transparent mt-1.5 pt-1 border-t border-t-gray-200">
       <ul class="flex flex-col text-gray-800">
         <li
           @click="openPage(link.id)"
-          class="cursor-pointer p-2 pl-4"
+          class="cursor-pointer py-1.5"
           v-for="link of navLinks">
           <NuxtLink :to="link.url">
             <h5 class="text-sm font-extrabold">{{ link.title }}</h5>
@@ -87,37 +88,5 @@ export default {
 
 }
 </script>
-
-<style>
-
-.menu-not-visible {
-  animation: anim-menu-hide ease 1s
-}
-
-.menu-visible {
-  animation: anim-menu ease 1.2s
-}
-
-@keyframes anim-menu-hide {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    display: none;
-  }
-}
-
-@keyframes anim-menu-drop {
-  from {
-    opacity: 0;
-  }
-  to {
-    display: block;
-    opacity: 1;
-  }
-}
-
-</style>
 
 

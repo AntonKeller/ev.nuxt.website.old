@@ -16,6 +16,7 @@
     </div>
 
 
+
     <div
       class="md:hidden w-full flex flex-col justify-start text-red-50 text-lg text-center p-4 sm:px-10">
       <div
@@ -63,8 +64,6 @@
         </ul>
       </div>
     </div>
-
-    <!--    <evFooter />-->
 
   </div>
 </template>

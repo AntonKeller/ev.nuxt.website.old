@@ -96,7 +96,7 @@ export default {
 <style scoped>
 
 .back {
-  background: url("@/assets/background/bg-rgb-three-lines-2.png") no-repeat center / cover;
+  /*background: url("@/assets/background/bg-rgb-three-lines-2.png") no-repeat center / cover;*/
 }
 
 .ratingShowAnimate {

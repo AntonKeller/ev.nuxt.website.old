@@ -6,7 +6,7 @@
 
       <div class="p-2 text-lg sm:text-xl md:text-xl text-center flex flex-col items-center sm:block">
         <img class="w-5 h-5 sm:w-6 sm:h-6 inline mr-2" src="../../assets/icons/address-icon.png" alt="no img">
-        <div class="inline">
+        <div class="inline selectSpan">
           <span class="mr-1">125040,</span>
           <span class="mr-1">Россия,</span>
           <span class="mr-1">Москва,</span>
@@ -19,14 +19,14 @@
 
       <div class="p-2 text-lg sm:text-xl md:text-xl text-center flex flex-col items-center sm:block">
         <img class="w-5 h-5 sm:w-6 sm:h-6 inline mr-2" src="../../assets/icons/phone-icon.png" alt="no img">
-        <span class="p-1 mr-2">+7 (495) 717 01 01</span>
-        <span>+7 (499) 557 07 97</span>
+        <span class="p-1 mr-2 selectSpan">+7 (495) 717 01 01</span>
+        <span class="selectSpan">+7 (499) 557 07 97</span>
       </div>
 
       <div class="p-2 text-xl sm:text-2xl md:text-xl text-center flex flex-col items-center sm:block">
         <img class="w-5 h-5 sm:w-6 sm:h-6 block sm:inline mr-2" src="../../assets/icons/email-icon.png"
              alt="no img">
-        <span class="block sm:inline">info@evcons.ru</span>
+        <span class="block sm:inline selectSpan">info@evcons.ru</span>
       </div>
     </div>
 
@@ -44,5 +44,11 @@ export default {
 </script>
 
 <style scoped>
-
+  .selectSpan {
+    display: inline-block;
+    background: #F9FAFBFF;
+    border-radius: 0.55rem;
+    color: #1F2937FF;
+    padding: 0.1rem 0.75rem;
+  }
 </style>
